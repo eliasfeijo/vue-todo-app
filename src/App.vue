@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <h1>Todo List</h1>
-    <TodoList v-bind:todos="todos" />
+    <TodoList
+      v-bind:todos="todos"
+      v-on:deleteTodo="deleteTodo"
+    />
   </div>
 </template>
 
@@ -33,6 +36,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    deleteTodo(id) {
+      this.todos = this.todos.filter(todo => todo.id !== id);
+    },
   },
 };
 </script>

@@ -4,6 +4,7 @@
         v-for="todo in todos"
         v-bind:key="todo.id"
         v-bind:todo="todo"
+        v-on:deleteTodo="$emit('deleteTodo', todo.id)"
       />
   </div>
 </template>
