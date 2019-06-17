@@ -45,13 +45,14 @@ export default {
       this.todos = this.todos.filter(todo => todo.id !== id);
     },
     toggleCompleted(id) {
-      this.todos = this.todos.map(todo => {
-        if(todo.id === id) {
+      this.todos = this.todos.map((t) => {
+        const todo = t;
+        if (todo.id === id) {
           todo.completed = !todo.completed;
         }
         return todo;
       });
-    }
+    },
   },
 };
 </script>
@@ -70,6 +71,7 @@ export default {
     align-items: center;
     height: 100vh;
     justify-content: center;
+    margin: auto;
   }
   #app > h1 {
     text-align: center;
@@ -77,5 +79,15 @@ export default {
   }
   #app > * {
     width: 100%;
+  }
+  @media screen and (min-width: 600px) {
+    #app {
+      width: 80%;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    #app {
+      width: 50%;
+    }
   }
 </style>

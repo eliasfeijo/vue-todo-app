@@ -1,6 +1,10 @@
 <template>
   <div class="todo-item" v-bind:class="{'is-complete': todo.completed}">
-    <input type="checkbox" v-bind:checked="todo.completed" @change="$emit('toggleCompleted', todo.id)">
+    <input
+      type="checkbox"
+      v-bind:checked="todo.completed"
+      @change="$emit('toggleCompleted', todo.id)"
+    >
     <p>{{ todo.title }}</p>
     <button @click="$emit('deleteTodo', todo.id)">x</button>
   </div>
@@ -23,6 +27,7 @@ export default {
   }
   .todo-item > input[type="checkbox"] {
     flex-grow: 1;
+    outline: none;
   }
   .todo-item > p {
     word-break: break-all;
@@ -37,5 +42,7 @@ export default {
     border-radius: 50%;
     border: #f00;
     padding: 4px;
+    width: 20px;
+    outline: none;
   }
 </style>
