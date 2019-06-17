@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Todo List</h1>
     <TodoList v-bind:todos="todos" />
   </div>
 </template>
@@ -37,4 +38,25 @@ export default {
 </script>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: beige;
+  }
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+  }
+  #app > h1 {
+    text-align: center;
+    margin: 10px;
+  }
+  #app > * {
+    width: 100%;
+  }
 </style>

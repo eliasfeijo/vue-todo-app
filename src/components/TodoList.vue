@@ -1,8 +1,10 @@
 <template>
   <div class="todo-list">
-    <div v-bind:key="todo.id" v-for="todo in todos">
-      <TodoItem v-bind:todo="todo" />
-    </div>
+      <TodoItem 
+        v-for="todo in todos"
+        v-bind:key="todo.id" 
+        v-bind:todo="todo"
+      />
   </div>
 </template>
 
@@ -17,3 +19,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .todo-list {
+    background: #efefef;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+  }
+</style>
