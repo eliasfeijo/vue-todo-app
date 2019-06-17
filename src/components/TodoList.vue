@@ -5,6 +5,7 @@
         v-bind:key="todo.id"
         v-bind:todo="todo"
         v-on:deleteTodo="$emit('deleteTodo', todo.id)"
+        v-on:toggleCompleted="$emit('toggleCompleted', todo.id)"
       />
   </div>
 </template>
