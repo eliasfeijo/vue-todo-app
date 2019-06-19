@@ -9,13 +9,14 @@
 </template>
 
 <script>
-import Header from './components/layout/Header'
+import Header from './components/layout/Header.vue';
+
 export default {
   name: 'App',
   components: {
     Header,
   },
-}
+};
 </script>
 
 <style>
@@ -25,7 +26,9 @@ export default {
   }
   body {
     background: beige;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   #app {
     display: flex;

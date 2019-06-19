@@ -10,17 +10,17 @@ export default {
   name: 'AddTodo',
   data() {
     return {
-      todoTitle: "",
+      todoTitle: '',
     };
   },
   methods: {
-    addTodo: function (e) {
+    addTodo(e) {
       e.preventDefault();
       this.$emit('addTodo', this.todoTitle);
-      this.todoTitle = "";
-    }
+      this.todoTitle = '';
+    },
   },
-}
+};
 </script>
 
 <style scoped>
