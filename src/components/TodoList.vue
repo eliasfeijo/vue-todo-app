@@ -29,5 +29,7 @@ export default {
     flex-direction: column;
     border-radius: 10%;
     margin: 10px;
+    overflow-y: auto;
+    max-height: 100vh;
   }
 </style>

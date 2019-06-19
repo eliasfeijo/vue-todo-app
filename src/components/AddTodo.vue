@@ -26,7 +26,7 @@ export default {
 <style scoped>
   .add-todo {
     display: flex;
-    padding: 10px;
+    width: 95% !important;
   }
   .add-todo > input[type="text"] {
     flex-grow: 10;

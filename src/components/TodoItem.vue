@@ -24,17 +24,16 @@ export default {
     padding: 10px;
     align-items: center;
     border-radius: 15%;
-  }
-  .todo-item > * {
+    justify-content: space-around;
     padding: 10px;
   }
   .todo-item > input[type="checkbox"] {
-    flex-grow: 1;
     outline: none;
   }
   .todo-item > p {
     word-break: break-all;
     flex-grow: 10;
+    margin: 10px 5px;
   }
   .todo-item.is-complete > p {
     text-decoration: line-through;
