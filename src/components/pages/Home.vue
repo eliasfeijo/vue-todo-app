@@ -59,11 +59,16 @@ export default {
     },
     addTodo(todoTitle) {
       const todo = {
-        id: 4,
         title: todoTitle,
         completed: false
       };
-      this.todos = [...this.todos, todo];
+      console.log(`Trying POST request on: ${baseUrl}`);
+      axios.post(`${baseUrl}/`, {todo}).then(response => {
+        console.log("POST request returned OK", response);
+        let todo = response.data.todo;
+        todo.id = response.data.id;
+        this.todos = [...this.todos, todo];
+      });
     },
   },
 };
