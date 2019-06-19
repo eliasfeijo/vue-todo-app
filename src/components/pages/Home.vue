@@ -68,7 +68,7 @@ export default {
         todo = response.data.todo;
         todo.id = response.data.id;
         this.todos = [...this.todos, todo];
-      });
+      }).catch(error => console.log(error));
     },
   },
 };
