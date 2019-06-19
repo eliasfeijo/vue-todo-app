@@ -1,4 +1,10 @@
-# todo-app
+# Todo App
+
+I made this app using [Vue](https://vuejs.org/) 
+and [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
+
+Many thanks to [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) 
+for their [Vue tutorial](https://www.youtube.com/watch?v=Wy9q22isx3U).
 
 ## Project setup
 ```
@@ -14,16 +20,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
