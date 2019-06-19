@@ -2,6 +2,9 @@
   <div id="app">
     <Header/>
     <router-view></router-view>
+    <footer>
+      <em>2019 - Made by Elias Feijó</em>
+    </footer>
   </div>
 </template>
 
@@ -14,7 +17,6 @@ export default {
   },
 }
 </script>
-
 
 <style>
   * {
@@ -46,5 +48,9 @@ export default {
     #app {
       width: 50%;
     }
+  }
+  footer {
+    margin: 10px;
+    text-align: center;
   }
 </style>
