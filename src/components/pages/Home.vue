@@ -58,14 +58,13 @@ export default {
         }).catch(error => console.log(error));
     },
     addTodo(todoTitle) {
-      let todo = {
+      const todo = {
         title: todoTitle,
         completed: false,
       };
       console.log(`Trying POST request on: ${baseUrl}`);
       axios.post(`${baseUrl}/`, { todo }).then((response) => {
         console.log('POST request returned OK', response);
-        todo = response.data.todo;
         todo.id = response.data.id;
         this.todos = [...this.todos, todo];
       }).catch(error => console.log(error));
