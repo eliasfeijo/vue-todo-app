@@ -53,7 +53,7 @@ export default {
     }
   }
   footer {
-    margin: 10px;
+    padding: 5px 0 0 0;
     text-align: center;
   }
 </style>
