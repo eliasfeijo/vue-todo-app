@@ -64,6 +64,7 @@ export default {
   }
   body {
     background: beige;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   #app {
     display: flex;
@@ -72,6 +73,7 @@ export default {
     height: 100vh;
     justify-content: center;
     margin: auto;
+    background: rgb(240, 240, 210);
   }
   #app > h1 {
     text-align: center;

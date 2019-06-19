@@ -24,9 +24,10 @@ export default {
 
 <style scoped>
   .todo-list {
-    background: #efefef;
+    background: rgb(235, 235, 200);
     display: flex;
     flex-direction: column;
     border-radius: 10%;
+    margin: 10px;
   }
 </style>

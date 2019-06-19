@@ -20,10 +20,13 @@ export default {
 <style scoped>
   .todo-item {
     display: flex;
-    background: #e9e9e9;
-    margin: 3px;
+    margin: 10px;
     padding: 10px;
     align-items: center;
+    border-radius: 15%;
+  }
+  .todo-item > * {
+    padding: 10px;
   }
   .todo-item > input[type="checkbox"] {
     flex-grow: 1;
@@ -42,7 +45,7 @@ export default {
     border-radius: 50%;
     border: #f00;
     padding: 4px;
-    width: 20px;
+    min-width: 20px;
     outline: none;
   }
 </style>
