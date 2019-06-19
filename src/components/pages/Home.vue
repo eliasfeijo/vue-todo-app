@@ -28,13 +28,20 @@ export default {
     };
   },
   mounted() {
+    console.log("Populating Todos list with initial data from JSONPlaceholder");
+    console.log(`Trying GET request on: ${baseUrl}`);
     axios.get(`${baseUrl}/?_limit=5`).then(response => {
+      console.log("GET request returned OK", response);
       this.todos = response.data;
     }).catch(error => console.log(error));
   },
   methods: {
     deleteTodo(id) {
       this.todos = this.todos.filter(todo => todo.id !== id);
+    console.log(`Trying DELETE request on: ${baseUrl}/${id}`);
+      axios.delete(`${baseUrl}/${id}`).then(response => {
+        console.log("DELETE request returned OK", response);
+      }).catch(error => console.log(error));
     },
     toggleCompleted(id) {
       this.todos = this.todos.map((t) => {
