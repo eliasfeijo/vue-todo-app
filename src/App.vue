@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <h1>Todo List</h1>
+    <Header/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Header from './components/layout/Header'
 export default {
-  
+  name: 'App',
+  components: {
+    Header,
+  },
 }
 </script>
 
@@ -29,10 +33,6 @@ export default {
     justify-content: center;
     margin: auto;
     background: rgb(240, 240, 210);
-  }
-  #app > h1 {
-    text-align: center;
-    margin: 10px;
   }
   #app > * {
     width: 100%;
