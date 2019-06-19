@@ -19,8 +19,7 @@ export default {
     flex-direction: column;
     align-items: center;
     margin: 10px;
-  }
-  h1 {
-    margin: 10px;
+    background: rgb(230, 230, 200);    
+    padding: 10px 0;
   }
 </style>
