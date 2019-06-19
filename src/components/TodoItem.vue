@@ -44,7 +44,8 @@ export default {
     border-radius: 50%;
     border: #f00;
     padding: 4px;
-    min-width: 20px;
+    width: 25px;
+    height: 25px;
     outline: none;
   }
 </style>
