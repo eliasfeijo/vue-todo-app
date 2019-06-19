@@ -12,24 +12,9 @@
 <script>
 import TodoList from '../TodoList.vue';
 import AddTodo from '../AddTodo.vue';
+import axios from 'axios';
 
-const initialData = [
-  {
-    id: 1,
-    title: 'Todo 1',
-    completed: false,
-  },
-  {
-    id: 2,
-    title: 'Todo 2',
-    completed: true,
-  },
-  {
-    id: 3,
-    title: 'Todo 3',
-    completed: false,
-  },
-];
+const baseUrl = "https://jsonplaceholder.typicode.com/todos";
 
 export default {
   name: 'Home',
@@ -39,8 +24,13 @@ export default {
   },
   data() {
     return {
-      todos: initialData,
+      todos: [],
     };
+  },
+  mounted() {
+    axios.get(`${baseUrl}/?_limit=5`).then(response => {
+      this.todos = response.data;
+    }).catch(error => console.log(error));
   },
   methods: {
     deleteTodo(id) {
