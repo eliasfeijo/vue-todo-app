@@ -51,6 +51,11 @@ export default {
         }
         return todo;
       });
+      console.log(`Trying PUT request on: ${baseUrl}/${id}`);
+      axios.put(`${baseUrl}/${id}`, {todo: this.todos.find(t => t.id === id)})
+      .then(response => {
+        console.log("PUT request returned OK", response);
+      }).catch(error => console.log(error));
     },
     addTodo(todoTitle) {
       const todo = {
